@@ -38,11 +38,21 @@ jobs:
         with:
           name: Error_results
           path: /tmp/upstream-boot-build/error-summary.txt
+      - name: Deploy am64x_evm_gp firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: am64x_evm_gp
+          path: /tmp/upstream-boot-build/deploy/am64x_evm_gp_all
       - name: Deploy am64x_evm_hs_fs firmware
         uses: actions/upload-artifact@v4
         with:
           name: am64x_evm_hs_fs
           path: /tmp/upstream-boot-build/deploy/am64x_evm_hs_fs_all
+      - name: Deploy am62x_evm_gp firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: am62x_evm_gp
+          path: /tmp/upstream-boot-build/deploy/am62x_evm_gp_all
       - name: Deploy am62x_evm_hsfs firmware
         uses: actions/upload-artifact@v4
         with:
@@ -63,24 +73,3 @@ jobs:
         with:
           name: am62px_evm_hsfs
           path: /tmp/upstream-boot-build/deploy/am62px_evm_hsfs_all
-      - name: Deploy j721e_evm_gp firmware
-        uses: actions/upload-artifact@v4
-        with:
-          name: j721e_evm_gp
-          path: /tmp/upstream-boot-build/deploy/j721e_evm_gp_all
-      - name: Deploy j721e_beagleboneai64_gp firmware
-        uses: actions/upload-artifact@v4
-        with:
-          name: j721e_beagleboneai64_gp
-          path: /tmp/upstream-boot-build/deploy/j721e_beagleboneai64_gp_all
-      - name: Deploy j7200_evm_hs firmware
-        uses: actions/upload-artifact@v4
-        with:
-          name: j7200_evm_hs
-          path: /tmp/upstream-boot-build/deploy/j7200_evm_hs_all
-      - name: Deploy j721s2_evm_hs_fs firmware
-        uses: actions/upload-artifact@v4
-        with:
-          name: j721s2_evm_hs_fs
-          path: /tmp/upstream-boot-build/deploy/j721s2_evm_hs_fs_all
-      - run: echo "This job's status is ${{ job.status }}."
