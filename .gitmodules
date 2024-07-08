@@ -6,7 +6,7 @@
 	url = https://github.com/OP-TEE/optee_os.git
 [submodule "u-boot"]
 	path = u-boot
-	url = https://github.com/jto6/u-boot.git
+	url = https://github.com/daniel-thompson/u-boot.git
 	branch = lwip
 [submodule "ti-linux-firmware"]
 	path = ti-linux-firmware
